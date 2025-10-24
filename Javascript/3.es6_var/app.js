@@ -1,5 +1,3 @@
-
-
 // console.log("Adil Malik")
 // console.log("Adil Malik")
 // console.log("Adil Malik")
@@ -14,21 +12,6 @@
 // console.log("Adil Malik")
 // console.log("Adil Malik")
 // console.log("Adil Malik")
-// console.log("Adil Malik")
-// console.log("Adil Malik")
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -83,6 +66,24 @@
 
 
 
+// let myName = "Adil"
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
+// console.log(myName);
 
 
 
