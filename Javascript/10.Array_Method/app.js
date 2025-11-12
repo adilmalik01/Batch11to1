@@ -31,12 +31,29 @@ let students = ["Aqib","Ali","Hamza","Azan","Adil","Hello"]
 
 
 
-// let copyArray = students.slice(2,5)
-// console.log(copyArray);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let new_valus = students.slice(1,5)
+// console.log(new_valus);
 // console.log(students);
 
 
 
-console.log(students)
-students.splice(2,1,"World")
-console.log(students)
+// console.log(students)
+// students.splice(2,1,"Saim")
+// console.log(students)
+// students.splice(2,1)
+// console.log(students)
