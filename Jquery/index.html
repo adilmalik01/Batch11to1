@@ -4,17 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jquery || Html</title>
+    <title>Document</title>
     <style>
         .result {
-            width: 400px;
-            height: 300px;
-            background-color: pink;
+            width: 300px;
+            height: 400px;
+            background-color: chartreuse;
         }
     </style>
 </head>
 
 <body>
+
+
 
 
     <input type="color" name="" id="colorInput">
@@ -24,28 +26,48 @@
 
 
 
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
     <script>
 
-        let colorInput = document.getElementById("colorInput")
-        console.log(colorInput)
-
-        let resultDiv = document.querySelector(".result")
-        console.log(resultDiv)
 
 
 
-        colorInput.addEventListener("input", () => {
-            console.log(colorInput.value)
+        // let colorInput = document.getElementById("colorInput")
+        // console.log(colorInput)
 
-            resultDiv.style.backgroundColor = colorInput.value
+        // let resultDiv = document.querySelector(".result")
+        // console.log(resultDiv)
+
+
+
+        // colorInput.addEventListener("input", () => {
+        //     console.log(colorInput.value)
+
+        //     resultDiv.style.backgroundColor = colorInput.value
+        // })
+
+
+        // $("")
+
+
+        let colorInput =  $("#colorInput")
+        colorInput.on("input", () => {
+
+            $(".result").css({ "background-color": colorInput.val() })
+
         })
 
 
 
+
     </script>
-
-
-
 </body>
 
 </html>
