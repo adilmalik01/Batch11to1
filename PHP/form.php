@@ -1,17 +1,21 @@
 <?php
 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email"];
-    $password =  $_POST["password"];
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $user_name =   $_POST["name"];
+    $user_email =  $_POST["email"];
+    $user_message = $_POST["message"];
 
 
 
-    echo "email : " . $email . "<br>";
-    echo "password : " . $password . "<br>";
-};
+    
 
 
+    echo "Name: " . $user_name . "<br>";
+    echo "Email: " . $user_email . "<br>";
+    echo "Message: " . $user_message . "<br>";
+
+}
 
 
 
@@ -35,18 +39,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
+    <h1>Contact Us</h1>
     <form action="./form.php" method="post">
-        <label>email :</label>
-        <input type="email" name="email" id="email">
 
-        <br><br>
+        <label>Name:</label><br>
+        <input type="text" name="name"><br><br>
 
-        <label>password :</label>
-        <input type="password" name="password" id="password">
+        <label>Email:</label><br>
+        <input type="email" name="email"><br><br>
 
-        <br><br>
+        <label>Message:</label><br>
+        <textarea name="message"></textarea><br><br>
 
-        <input type="submit" value="submit">
+        <button type="submit">Send</button>
     </form>
 
 
