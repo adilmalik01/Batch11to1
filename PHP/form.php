@@ -1,5 +1,6 @@
 <?php
 
+include "./config/db.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $user_name =   $_POST["name"];
@@ -8,12 +9,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 
-    
+    $sql_query = "INSERT INTO `users`(`name`, `email`, `message`) VALUES ('$user_name','$user_email','$user_message')";
 
 
-    echo "Name: " . $user_name . "<br>";
-    echo "Email: " . $user_email . "<br>";
-    echo "Message: " . $user_message . "<br>";
+
+    if(mysqli_query($connection,$sql_query)){
+        echo "Data Inserted Successfully";
+    } else {
+        echo "Error: " . mysqli_error($connection);
+    }
+
+    // echo "Name: " . $user_name . "<br>";
+    // echo "Email: " . $user_email . "<br>";
+    // echo "Message: " . $user_message . "<br>";
+
+
 
 }
 
