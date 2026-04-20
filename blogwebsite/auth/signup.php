@@ -1,4 +1,39 @@
-<!-- signup.php -->
+<?php
+
+include("../config/db.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+  $fullname = $_POST["fullname"];
+  $email = $_POST["email"];
+  $dob = $_POST["dob"];
+  $password = $_POST["password"];
+
+  echo "<script>console.log('Received data: " . json_encode($_POST) . "');</script>";
+
+  $check_query = "SELECT * FROM users WHERE email='$email'";
+  $check_result = mysqli_query($connection, $check_query);
+
+  if (mysqli_num_rows($check_result) > 0) {
+    echo "<script>alert('Email already exists. Please use a different email.');</script>";
+  } else {
+
+    $insert_query = "INSERT INTO users (fullname, email, dob, password) VALUES ('$fullname', '$email', '$dob', '$password')";
+
+    if (mysqli_query($connection, $insert_query)) {
+      echo "<script>alert('Signup successful! You can now login.'); window.location.href='login.php';</script>";
+    } else {
+      echo "<script>alert('Error: " . mysqli_error($connection) . "');</script>";
+    }
+  }
+}
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +130,7 @@
     <div class="container">
       <h2>Create Account</h2>
 
-      <form action="signup_process.php" method="POST">
+      <form action="./signup.php" method="POST">
         <div class="input-box">
           <input type="text" name="fullname" placeholder="Full Name" required>
         </div>
